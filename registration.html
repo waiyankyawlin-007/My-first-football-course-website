@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!--Custom Style -->
+  <style type="text/css">
+    body {
+      background-image: url('image/bgge.jpg');
+      background-size: cover;
+      width: 100%;
+    }
+
+    h1 {
+      background: rgba(255, 252, 252, 0);
+      filter: alpha(opacity=30);
+      background: rgba(7, 7, 7, 0.637);
+    }
+
+    span {
+      position: relative;
+      /* IE6/7/8 */
+      color: rgb(255, 255, 255);
+      font-size: 1.3em;
+      margin: 0;
+    }
+  </style>
+  <!--Styel Sheet From Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <!--Style Sheet From Fontawesome-->
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
+    crossorigin='anonymous'>
+  <title>Registration Form</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+  
+
+             
+        
+</head>
+
+<body id="della">
+  <form name="hahaform" id="waiyanform" method="POST">
+<center>
+<!--Logo And Header -->
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-2">
+          <img src="image/logo.gif" alt="logo Gif" width="50%" class="rounded-circle ">
+        </div>
+        <div class="col-8 ">
+
+          <h3 class="p-3 mb-2 bg-dark text-white text-center"><a href="index.html"></a><span><marquee>REGISTRATION FORM </marquee></span> </h3>
+
+        </div>
+        <div class="col-2">
+          <img  src="image/logo.gif" alt="logo Gif" width="50%" class="rounded-circle ">
+        </div>
+      </div>
+    </div>
+    </center>
+  <div class="p-3 mb-2  text-white">
+<!--Main Body -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-sm-10">
+          <form class="needs-validation" novalidate>
+            <div class="container">
+              <div class="row">
+                <!--  First Name Text Box Area-->
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="Firstname"><b>First Name</b></label>
+                    <input type="text" maxlength="50" class="form-control" id="fname" name="fname" aria-describedby="FirstnameHelp"
+                      onkeypress="return Check_A(event,'fname_error')" onblur="BlankError('fname','fname_error')"
+                      placeholder="First Name" required>
+                    <div class="col" id="fname_error" style="color:red">
+                      <div class="invalid-feedback">
+                        Please choose a username.
+                      </div></div>
+                  </div>
+                </div>
+                <!-- Last Name Text Box Area-->
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="Lastname"><b>Last Name</b></label>
+                    <input type="text" maxlength="50" class="form-control" id="lname" name="lname" aria-describedby="lastnameHelp"
+                      onkeypress="return Check_A(event,'lname_error')" onblur="BlankError('lname','lname_error')"
+                      placeholder="Last Name" required>
+                    <div class="col" id="lname_error" style="color:red"></div>
+                  </div>
+                </div>
+                <!-- Tooltip For First Name & Last Name -->
+                <div class="col-sm-2">
+                  <i title='Fill first name and second name' style='font-size:24px' class='far'>&#xf059;</i>
+                </div>
+              </div>
+              <!-- Last Email Text Box Area-->
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-group">
+                    <label for="Email"><b>Your Email</b></label>
+                    <input type="email" maxlength="30" class="form-control" id="Email" name="email" onblur="Check_Email()"
+                      aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <div class="col" id="email-er" style="color:red"></div>
+                  </div>
+                </div>
+                <!-- Tooltip For Email -->
+                <div class="col-sm-2">
+                  <i title='maximum 16 numbers' style='font-size:24px' class='far'>&#xf059;</i>
+                </div>
+              </div>
+
+  
+              <br>
+              <!-- Contact Number text Area-->
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-group">
+		<label for="Phone"><b>Contact Number</b></label>
+                    <input type="tel" name="pnumber" id="phone" placeholder="(555) 555-5555" autocomplete="tel" maxlength="14"
+                      class="form-control"  onblur="BlankError('phone','ph-no_error')"
+                      required />
+                    <div class="col" id="ph-no_error" style="color:red"></div>
+                  </div>
+
+                </div>
+                <!-- Tooltip For Phone Number-->
+                <div class="col-sm-2">
+                  <i title='maximun 11 numbers' style='font-size:24px' class='far'>&#xf059;</i>
+                </div>
+              </div>
+              <!-- Gender Radio Area-->
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-group">
+                    <label for="Gander"><b>Gender</b></label><br>
+                    <div class="form-check form-check-inline" name="gender">
+                     <input class="form-check-input" type="radio" name="gender" id="Gender" value="Male" required>
+                      <label class="form-check-label" for="Male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                     <input class="form-check-input" type="radio" name="gender" id="Gender" value="Female" required>
+                      <label class="form-check-label" for="Female">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="Gender" value="Other" required>
+                      <label class="form-check-label" for="Other">Other</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tooltip For Gender-->
+                <div class="col-sm-2">
+                  <i title='choice your gender (Default value: Other)' style='font-size:24px' class='far'>&#xf059;</i>
+                </div>
+              </div>
+              <!-- Address Text Area-->
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="form-group">
+                    <label for="Address"><b>Residential Address</b></label>
+                    <textarea class="form-control" id="Address" name="address" rows="4" onblur="BlankError('phone','add_error')" required></textarea>
+                    <div class="col" id="add_error" style="color:red"></div>
+                  </div>
+
+                </div>
+                <!--Tooltip for  Address Text Area-->
+                <div class="col-sm-2">
+                  <i title='Fill your address' style='font-size:24px' class='far'>&#xf059;</i>
+                </div>
+              </div>
+              <!--Button Type Area Submit and Reset -->
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col">
+                    <button type="submit" class="btn btn-success btn-lg btn-block rounded-pill" onclick="loadDoc()">Register</button>
+                  </div>
+                  <div class="col">
+                    <button type="reset" onclick="myFunction()" class="btn btn-danger btn-lg btn-block rounded-pill">Reset
+                      Form</button>
+                  </div>
+                </div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="Dod.js"></script>
+</form>
+</body>
+<script>
+
+  function loadDoc() {
+var xhttp = new XMLHttpRequest();
+var a = document.forms["waiyanform"]["fname"].value;
+var b = document.forms["waiyanform"]["lname"].value;
+var c = document.forms["waiyanform"]["email"].value;
+var d = document.forms["waiyanform"]["pnumber"].value;
+var e = document.forms["waiyanform"]["gender"].value;
+xhttp.onreadystatechange = function() {
+if (a == ""){
+document.getElementById("err").innerHTML = "Please Enter Your First Name ";
+return false;
+}
+else if (b == ""){
+document.getElementById("err").innerHTML = "Please Enter Your Last Name ";
+return false;
+}
+else if (c == ""){
+document.getElementById("err").innerHTML = "Please Enter Email";
+return false;
+}
+else if (d == ""){
+document.getElementById("err").innerHTML = "Please Enter Phone Number" ;
+return false;
+}
+else if (e == ""){
+document.getElementById("err").innerHTML = "Please Select Gender";
+return false;
+}
+else {
+document.getElementById("della").innerHTML = this.responseText;
+}
+};
+xhttp.open("POST", "thankpage.html", true);
+xhttp.send();
+}
+</script>
+</html>
